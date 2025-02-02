@@ -1,0 +1,308 @@
+:root {
+  --bg-primary: #FDFBF6;
+  --nav-bg: #D4B996;
+  --nav-text: #282828;
+  --nav-border: #FDFBF6;
+  --body-text: #282828;
+  --body-border: #D4B996;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  color: var(--body-text);
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+}
+
+body {
+  height: 100vh;
+  background: var(--bg-primary);
+}
+
+select, button {
+  text-align: center;
+  border: none;
+  background: transparent;
+  border-radius: 6px;
+  padding: 5px 17px;
+  background-color: var(--bg-primary);
+  cursor: pointer;
+  box-shadow: 0px 0px 5px 2px var(--body-border) inset;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+button {
+  font-size: 13px;
+  font-weight: 500;
+}
+button:hover {
+  transition: 0.3s ease all;
+  box-shadow: 0px 0px 9px 6px var(--body-border) inset;
+}
+
+input {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  text-align: center;
+}
+
+.toggleBtn {
+  padding: 2px 7px;
+  font-size: 9px;
+  box-shadow: 0px 0px 3px 1px var(--nav-border) inset;
+}
+.toggleBtn:hover {
+  box-shadow: 0px 0px 6px 3px var(--nav-border) inset;
+}
+
+option {
+  cursor: pointer;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.container .fullSite {
+  max-width: 420px;
+  width: 100%;
+}
+.container .fullSite .parts .top .navBar {
+  padding: 7px 0;
+  background-color: var(--nav-bg);
+  border-radius: 0 0 8px 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.container .fullSite .parts .top .navBar ul {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .fullSite .parts .top .navBar ul li {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+.container .fullSite .parts .top .navBar ul li:first-child {
+  border-right: 1px solid var(--nav-text);
+}
+.container .fullSite .parts .top .navBar ul li .active {
+  transition: 0.3s ease all;
+  display: flex;
+  align-items: center;
+}
+.container .fullSite .parts .top .navBar ul li .active::after {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+  content: "\f058";
+  font-size: 16px;
+  color: var(--nav-text);
+  margin-left: 5px;
+}
+.container .fullSite .parts .top .navBar ul li a {
+  padding: 4px 10px;
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--nav-text);
+}
+.container .fullSite .parts .top .topDown {
+  padding: 0 8px 8px 8px;
+  text-align: center;
+}
+.container .fullSite .parts .top .topDown .toggle {
+  display: inline-block;
+  background-color: var(--nav-bg);
+  padding: 0 12px 6px 12px;
+  margin-bottom: 6px;
+  border-radius: 0 0 6px 6px;
+}
+.container .fullSite .parts .top .topDown .toggle button {
+  color: var(--nav-text);
+  background-color: var(--nav-bg);
+}
+.container .fullSite .parts .top .topDown .requirements .reqFirst, .container .fullSite .parts .top .topDown .requirements .reqSec {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--body-border);
+}
+.container .fullSite .parts .top .topDown .requirements .reqFirst .req, .container .fullSite .parts .top .topDown .requirements .reqSec .req {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.container .fullSite .parts .top .topDown .requirements .reqSec {
+  margin: 12px 0 4px 0;
+}
+.container .fullSite .parts .middle {
+  padding: 0 8px 12px 8px;
+  margin-bottom: 12px;
+}
+.container .fullSite .parts .middle .fade-in li {
+  font-size: 14px;
+}
+.container .fullSite .parts .middle ul {
+  box-shadow: 0px 0px 5px 2px var(--body-border) inset;
+  width: 100%;
+  display: flex;
+  margin: 4px 0;
+  border-radius: 6px;
+  padding: 5px 0;
+}
+.container .fullSite .parts .middle ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid var(--body-border);
+}
+.container .fullSite .parts .middle ul li:first-child {
+  width: 30%;
+}
+.container .fullSite .parts .middle ul li:nth-child(2) {
+  width: 30%;
+}
+.container .fullSite .parts .middle ul li:last-child {
+  width: 40%;
+  border: none;
+}
+.container .fullSite .parts .middle ul li select {
+  box-shadow: 0px 0px 2px 1px var(--body-border) inset;
+  border-radius: 6px;
+  padding: 2px 14px;
+}
+.container .fullSite .parts .style2middle {
+  border-bottom: 2px solid var(--body-border);
+}
+.container .fullSite .parts .style2middle ul:first-child {
+  background-color: var(--nav-bg);
+}
+.container .fullSite .parts .style2middle ul:first-child li {
+  border-right: 1px solid var(--nav-text);
+}
+.container .fullSite .parts .style2middle ul:first-child li:last-child {
+  border: none;
+}
+.container .fullSite .parts .style2middle ul:last-child li:nth-child(3) {
+  border-right: none;
+}
+.container .fullSite .parts .style2middle ul li {
+  font-size: 11px;
+}
+.container .fullSite .parts .style2middle ul li:first-child {
+  width: 36% !important;
+}
+.container .fullSite .parts .style2middle ul li:nth-child(2) {
+  width: 29% !important;
+}
+.container .fullSite .parts .style2middle ul li:nth-child(3) {
+  width: 21% !important;
+}
+.container .fullSite .parts .style2middle ul li:last-child {
+  width: 14% !important;
+}
+.container .fullSite .parts .style2middle ul li input {
+  font-size: 11px;
+}
+.container .fullSite .parts .bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 200px;
+}
+.container .fullSite .parts .bottom button {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.container .fullSite .parts .bottom h1 {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.container .fullSite .parts .style2bottom {
+  height: 200px;
+}
+.container .fullSite .parts .style2bottom .buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.container .fullSite .parts .style2bottom h1 {
+  height: 26px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slideOut {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+}
+@keyframes growShrink {
+  from {
+    font-size: 3rem;
+    opacity: 0;
+  }
+  to {
+    font-size: 1.5rem;
+    opacity: 1;
+  }
+}
+.hidden {
+  opacity: 0;
+  transform: translateX(-20px);
+  pointer-events: none;
+}
+
+.slide-in {
+  animation: slideIn 0.3s ease-in-out forwards;
+}
+
+.slide-out {
+  animation: slideOut 0.3s ease-in-out forwards;
+}
+
+.grow-shrink {
+  animation: growShrink 0.5s ease-in-out forwards;
+}/*# sourceMappingURL=style.css.map */
