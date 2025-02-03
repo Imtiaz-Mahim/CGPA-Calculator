@@ -19,27 +19,25 @@ document.addEventListener("DOMContentLoaded", function () {
             if (index === 0) return; // Skip the header row
             
             const credits = ul.querySelector(".credits")?.value.trim();
-            const loss = ul.querySelector(".loss")?.value.trim();
             const gpa = ul.querySelector(".gpa")?.value.trim();
             const opt = ul.querySelector(".opt")?.value.trim();
             
-            if ((credits === "" || loss === "" || gpa === "") && !ul.querySelector(".opt")) {
+            if ((credits === "" || gpa === "") && !ul.querySelector(".opt")) {
                 allFieldsFilled = false;
             }
 
-            if ((credits && isNaN(credits)) || (loss && isNaN(loss)) || (gpa && isNaN(gpa)) || (opt && isNaN(opt))) {
+            if ((credits && isNaN(credits)) || (gpa && isNaN(gpa)) || (opt && isNaN(opt))) {
                 validInputs = false;
             }
 
             const creditsVal = parseFloat(credits) || 0;
-            const lossVal = parseFloat(loss) || 0;
             const gpaVal = parseFloat(gpa) || 0;
             const optVal = parseFloat(opt) || 0;
             
             if (ul.querySelector(".opt")) {
                 totalWeightedGPA += optVal;
             } else {
-                totalWeightedGPA += (creditsVal - lossVal) * gpaVal;
+                totalWeightedGPA += (creditsVal) * gpaVal;
                 totalCredits += creditsVal;
             }
         });
@@ -62,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     resetBtn.addEventListener("click", function () {
         inputFields.forEach(input => {
-            if (input.classList.contains("loss") || input.classList.contains("opt")) {
+            if (input.classList.contains("opt")) {
                 input.value = "0.00";
             } else {
                 input.value = "";
