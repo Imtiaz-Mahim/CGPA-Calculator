@@ -15,7 +15,7 @@
   list-style: none;
   color: var(--body-text);
   font-family: "Poppins", sans-serif;
-  font-size: 12px;
+  font-size: 13px;
 }
 
 body {
@@ -173,13 +173,13 @@ option {
   border-right: 1px solid var(--body-border);
 }
 .container .fullSite .parts .middle ul li:first-child {
-  width: 30%;
+  width: 28%;
 }
 .container .fullSite .parts .middle ul li:nth-child(2) {
-  width: 30%;
+  width: 28%;
 }
 .container .fullSite .parts .middle ul li:last-child {
-  width: 40%;
+  width: 44%;
   border: none;
 }
 .container .fullSite .parts .middle ul li select {
@@ -203,22 +203,19 @@ option {
   border-right: none;
 }
 .container .fullSite .parts .style2middle ul li {
-  font-size: 11px;
+  font-size: 13px;
 }
 .container .fullSite .parts .style2middle ul li:first-child {
-  width: 36% !important;
+  width: 41% !important;
 }
 .container .fullSite .parts .style2middle ul li:nth-child(2) {
-  width: 29% !important;
-}
-.container .fullSite .parts .style2middle ul li:nth-child(3) {
-  width: 21% !important;
+  width: 36% !important;
 }
 .container .fullSite .parts .style2middle ul li:last-child {
-  width: 14% !important;
+  width: 23% !important;
 }
 .container .fullSite .parts .style2middle ul li input {
-  font-size: 11px;
+  font-size: 13px;
 }
 .container .fullSite .parts .bottom {
   display: flex;
